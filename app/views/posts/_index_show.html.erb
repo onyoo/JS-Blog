@@ -1,4 +1,4 @@
-<a href="/posts/<%= post.id %>"><%= post.title %></a>
+<a href="/posts/<%= post.id %>"><%= post.title.titleize %></a>
 <div class="body">
   <p class="body_text"><%= truncate post.body %></p>
 </div>

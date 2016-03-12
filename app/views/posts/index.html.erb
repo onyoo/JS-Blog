@@ -1,12 +1,14 @@
+<%= paginate @posts %>
+<br><br>
 <a href="/posts/new">New Post</a>
-
 <h3>Posts:</h3>
 
 <ul class="posts_index">
   <% @posts.each do |post| %>
-  <a href="/posts/<%=post.id%>/edit" id="edit-<%= post.id %>">Edit</a>
+
     <li class="post">
       <%= render partial: 'index_show', locals: { post: post } %>
     </li>
   <% end %>
 </ul>
+<%= page_entries_info @posts %>

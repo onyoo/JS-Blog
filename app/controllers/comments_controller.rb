@@ -17,10 +17,7 @@ class CommentsController < ApplicationController
   def update
     @comment = Comment.find(params[:id])
     @comment.update(comment_params)
-    respond_to do |format|
-      format.html { render }
-      format.json { render json: @comment }
-    end
+    redirect_to post_path(@comment.post)
   end
 
   def delete

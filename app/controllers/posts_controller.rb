@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
 
   def index
-    @posts = Post.all
+    @posts = Post.order(created_at: :desc).page(params[:page])
   end
 
   def new
@@ -20,7 +20,7 @@ class PostsController < ApplicationController
   def update
     @post = Post.find(params[:id])
     @post.update(post_params)
-    render :show
+    redirect_to post_path(@post)
   end
 
   def show
