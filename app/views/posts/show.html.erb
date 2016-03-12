@@ -1,2 +1,5 @@
-
+<a href="/posts/<%=@post.id%>/edit" class="edit_post">Edit</a>
+<a href="/posts">Index</a>
 <%= render partial: 'show', locals: { post: @post } %>
+
+<a href="/comments/new" class="new_comment">Comment</a>
