@@ -1,0 +1,6 @@
+
+
+Blog app with comments
+
+Can comment on show page
+  -comments fire with ajax
