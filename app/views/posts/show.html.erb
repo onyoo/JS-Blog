@@ -1,5 +1,8 @@
 <a href="/posts/<%=@post.id%>/edit" class="edit_post">Edit</a>
 <a href="/posts">Index</a>
 <%= render partial: 'show', locals: { post: @post } %>
-
-<a href="/comments/new" class="new_comment">Comment</a>
+<h3>Comment</h3>
+<%= render partial: 'comments/form', locals: { comment: @comment }%>
+<!-- <a href="/comments/new" class="new_comment">Comment</a> -->
+<h3>Comments:</h3>
+<%= render partial: 'comments/index_show', locals: { comments: @post.comments } %>

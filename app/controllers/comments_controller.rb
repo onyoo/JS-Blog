@@ -1,15 +1,13 @@
 class CommentsController < ApplicationController
 
   def new
+    binding.pry
     @comment = Comment.new
   end
 
   def create
-    @comment = Comment.find(params[:id])
-    respond_to do |format|
-      format.html { render }
-      format.json { render json: @comment }
-    end
+    @comment = Comment.create(comment_params)
+    redirect_to post_path(@comment.post)
   end
 
   def edit
@@ -39,6 +37,12 @@ class CommentsController < ApplicationController
       format.html { render }
       format.json { render json: @comment }
     end
+  end
+
+  private
+
+  def comment_params
+    params.require(:comment).permit(:body, :user_id, :post_id)
   end
 
 end
