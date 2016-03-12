@@ -1,10 +1,12 @@
 <a href="/posts/new">New Post</a>
 
 <h3>Posts:</h3>
+
 <ul class="posts_index">
   <% @posts.each do |post| %>
+  <a href="/posts/<%=post.id%>/edit" id="edit-<%= post.id %>">Edit</a>
     <li class="post">
-      <%= render partial: 'show', locals: { post: post } %>
+      <%= render partial: 'index_show', locals: { post: post } %>
     </li>
   <% end %>
 </ul>
