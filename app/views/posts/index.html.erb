@@ -1,0 +1,8 @@
+<h3>Posts:</h3>
+<ul class="posts_index">
+  <%= @posts.each do |post| %>
+    <li class="post">
+      <%= render 'show', locals: { post: post } %>
+    </li>
+  <% end %>
+</ul>
