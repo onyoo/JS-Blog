@@ -4,9 +4,7 @@ Rails.application.routes.draw do
   resources :posts
   resources :users
   resources :comments
-
-  get 'login' => 'sessions#new'
-  get 'logout' => 'sessions#destroy'
+  resources :sessions, only: [:new, :create, :destroy]
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
