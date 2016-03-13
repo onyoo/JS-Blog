@@ -1,4 +1,5 @@
 class PostsController < ApplicationController
+  before_action :require_user, only: [:show, :new, :create]
 
   def index
     @posts = Post.order(created_at: :desc).page(params[:page])

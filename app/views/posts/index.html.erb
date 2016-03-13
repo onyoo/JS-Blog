@@ -1,7 +1,9 @@
 
   <%= paginate @posts %>
   <br><br>
-  <%= link_to 'New Post', new_post_path, id: "new_post_link" %>
+  <% if current_user %>
+    <%= link_to 'New Post', new_post_path, id: "new_post_link" %>
+  <% end %>
   <h3>Posts:</h3>
 
   <ul class="posts_index">
