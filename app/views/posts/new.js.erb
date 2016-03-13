@@ -1,2 +1,3 @@
-
-$('body').prepend('<div#new_post_form><%= j(render partial: "form", locals: { post: @post })%></div>');
+$('body').prepend('<div id="form_background"></div>');
+$('div#new_post_form').show();  
+$('#new_post_form').prepend('<%= j(render partial: "form", locals: { post: @post })%>');

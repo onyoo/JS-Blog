@@ -13,3 +13,28 @@
  *= require_tree .
  *= require_self
  */
+
+ #form_background {
+   width: 100%;
+   height: 100%;
+   position: absolute; top: 0; left: 0;
+   z-index: 1;
+   background-color: black;
+   opacity: .7;
+ }
+
+ #new_post_form {
+  position: absolute;
+  display: none;
+  background-color: white;
+  top: 5%;
+  left: 5%;
+  width: 80%;
+  padding: 5%;
+  z-index: 2;
+}
+
+#new_post_form {
+
+
+}

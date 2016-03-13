@@ -1,14 +1,15 @@
-<%= paginate @posts %>
-<br><br>
-<%= link_to 'New Post', new_post_path, id: "new_post_link" %>
-<h3>Posts:</h3>
+<div id="new_post_form"></div>
+  <%= paginate @posts %>
+  <br><br>
+  <%= link_to 'New Post', new_post_path, id: "new_post_link" %>
+  <h3>Posts:</h3>
 
-<ul class="posts_index">
-  <% @posts.each do |post| %>
+  <ul class="posts_index">
+    <% @posts.each do |post| %>
 
-    <li class="post">
-      <%= render partial: 'index_show', locals: { post: post } %>
-    </li>
-  <% end %>
-</ul>
-<%= page_entries_info @posts %>
+      <li class="post">
+        <%= render partial: 'index_show', locals: { post: post } %>
+      </li>
+    <% end %>
+  </ul>
+  <%= page_entries_info @posts %>
