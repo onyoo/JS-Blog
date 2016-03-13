@@ -11,7 +11,11 @@ class PostsController < ApplicationController
 
   def create
     @post = Post.create(post_params)
-    render 'create.js', status: 201
+    if @post.valid?
+      render 'create.js', status: 201
+    else
+      render 'error.js'
+    end
   end
 
   def edit
@@ -21,8 +25,11 @@ class PostsController < ApplicationController
 
   def update
     @post = Post.find(params[:id])
-    @post.update(post_params)
-    render 'edit.js', status: 201
+    if @post.update(post_params)
+      render 'edit.js', status: 201
+    else
+      render 'error.js'
+    end
   end
 
   def show
