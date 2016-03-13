@@ -6,11 +6,12 @@ class PostsController < ApplicationController
 
   def new
     @post = Post.new
+    render 'new.js', layout: false
   end
 
   def create
     @post = Post.create(post_params)
-    redirect_to posts_path
+    render 'create.js', status: 201
   end
 
   def edit

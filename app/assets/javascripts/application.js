@@ -17,17 +17,16 @@
 
 $(document).ready(function() {
   addPostComment();
+  leaveAReply();
+  newPostLink();
 })
 
 
   function addPostComment() {
     $('#new_comment').on('submit', function(event) {
       event.preventDefault();
-
       // url = this.action;
-      //
       // data = $(this).serialize();
-      //
       // {
       //   authenticity_token: $('input[name="authenticity_token"]').val(),
       //   comment: {
@@ -36,7 +35,6 @@ $(document).ready(function() {
       //     user_id: $('#comment_user_id').val()
       //   }
       // }
-
       // $.ajax({
       //   type: 'POST',
       //   url: url,
@@ -45,9 +43,18 @@ $(document).ready(function() {
       //     // moved to create.js.erb
       //   }
       // });
-  });
-
-  $('#reply_form').on('submit', function(event) {
-    event.preventDefault();
-  });
-}
+    });
+  }
+  function leaveAReply() {
+    $('#reply_form').on('submit', function(event) {
+      event.preventDefault();
+    });
+  }
+  function newPostLink() {
+    $('#new_post_link').on('click', function(event) {
+      event.preventDefault();
+      // must have callback function to prevent CSRF
+      $.get(event.toElement.href, function(r) {
+      });
+    });
+  }
