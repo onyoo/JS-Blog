@@ -1,5 +1,9 @@
-// $('#post_title').val('Manditory');
-// $('#post_body').val('Manditory');
+$('#post_title').css('border-color', 'initial');
+$('#post_title').css('border-image-width', 'initial');
+$('#post_body').css('border-color', 'initial');
 
-$('#post_title').css('border-color', 'red');
-$('#post_body').css('border-color', 'red');
+if ("<%=@post.errors[:title]%>" != "[]") {
+  $('#post_title').css('border-color', 'red');
+}if ("<%=@post.errors[:body]%>" != "[]") {
+  $('#post_body').css('border-color', 'red');
+}
