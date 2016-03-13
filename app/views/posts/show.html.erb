@@ -13,8 +13,6 @@
   <% @post.comments.where('body != "" AND comment_id is NULL').each do |comment| %>
     <li class="comment">
       <%= render partial: 'comments/comment', locals: { comment: comment } %>
-      <!-- renders reply form for newly built reply -->
-      <%= render partial: 'comments/reply_form', locals: { reply: comment.replies.build }%>
     </li>
   <% end %>
 </ul>

@@ -11,5 +11,6 @@
 <a href='/comments/new' class="new_comment">Show Reply (not hidden yet)</a>
 
 <ul class='replies' id='<%=comment.id%>'>
-
+  <!-- renders reply form for newly built reply -->
+  <%= render partial: 'comments/reply_form', locals: { reply: comment.replies.build }%>
 </ul>
