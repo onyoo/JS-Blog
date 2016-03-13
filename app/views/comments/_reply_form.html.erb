@@ -1,0 +1,11 @@
+<%= form_for reply, remote: true, :url => url_for(:controller => 'replies', :action => 'create'), :html => { :id => "reply_form" } do |f| %>
+
+  <%= f.text_field :body %>
+
+  <%= f.hidden_field :post_id, value: @post.id %>
+  <%= f.hidden_field :user_id, value: current_user.id %>
+
+  <%= f.hidden_field :comment_id, value: reply.comment_id %>
+
+  <%= f.submit 'Reply'%>
+<% end %>

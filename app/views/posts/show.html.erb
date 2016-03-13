@@ -1,17 +1,20 @@
-<a href="/posts/<%=@post.id%>/edit" class="edit_post">Edit</a>
+<a href="/posts/<%= @post.id %>/edit" class="edit_post">Edit</a>
 <a href="/posts">Index</a>
 
 <%= render partial: 'posts/show', locals: { post: @post } %>
 
 <h3>Comment</h3>
 <%= render partial: 'comments/form', locals: { comment: @comment }%>
-<!-- <a href="/comments/new" class="new_comment">Comment</a> -->
+
 <h3>Comments:</h3>
 <ul class="comment_list">
 
-  <% @post.comments.where('body != ""').each do |comment| %>
+  <!-- only loops through the comments that are not replies -->
+  <% @post.comments.where('body != "" AND comment_id is NULL').each do |comment| %>
     <li class="comment">
       <%= render partial: 'comments/comment', locals: { comment: comment } %>
+      <!-- renders reply form for newly built reply -->
+      <%= render partial: 'comments/reply_form', locals: { reply: comment.replies.build }%>
     </li>
   <% end %>
 </ul>

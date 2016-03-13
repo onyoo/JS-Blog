@@ -1,0 +1,2 @@
+$('form#reply_form #comment_body').val('');
+$('.comment #<%=@comment.id%>').append('<li><%= @reply.body %></li>')

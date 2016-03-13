@@ -24,10 +24,10 @@ $(document).ready(function() {
     $('#new_comment').on('submit', function(event) {
       event.preventDefault();
 
-      url = this.action;
-
-      data = $(this).serialize();
-
+      // url = this.action;
+      //
+      // data = $(this).serialize();
+      //
       // {
       //   authenticity_token: $('input[name="authenticity_token"]').val(),
       //   comment: {
@@ -45,5 +45,9 @@ $(document).ready(function() {
       //     // moved to create.js.erb
       //   }
       // });
+  });
+
+  $('#reply_form').on('submit', function(event) {
+    event.preventDefault();
   });
 }
