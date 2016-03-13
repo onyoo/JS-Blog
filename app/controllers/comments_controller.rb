@@ -5,8 +5,9 @@ class CommentsController < ApplicationController
   end
 
   def create
-    @comment = Comment.create(comment_params)
-    redirect_to post_path(@comment.post)
+    @post = Post.find(params[:comment][:post_id])
+    @comment = @post.comments.create(comment_params)
+    render 'show', layout: false
   end
 
   def edit
@@ -38,7 +39,7 @@ class CommentsController < ApplicationController
   private
 
   def comment_params
-    params.require(:comment).permit(:body, :user_id, :post_id)
+    params.require(:comment).permit(:body, :user_id)
   end
 
 end

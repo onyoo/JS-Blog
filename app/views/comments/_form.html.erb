@@ -1,10 +1,11 @@
 
 <%= form_for comment do |f| %>
+
   <%= f.label :body %>
   <%= f.text_field :body %>
 
   <%= f.hidden_field :post_id, value: @post.id %>
-
+  <%= f.hidden_field :user_id, value: current_user.id %>
 
   <%= f.submit %>
 <% end %>
