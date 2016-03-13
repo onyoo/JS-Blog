@@ -16,12 +16,13 @@ class PostsController < ApplicationController
 
   def edit
     @post = Post.find(params[:id])
+    render 'new.js', layout: false
   end
 
   def update
     @post = Post.find(params[:id])
     @post.update(post_params)
-    redirect_to post_path(@post)
+    render 'edit.js', status: 201
   end
 
   def show

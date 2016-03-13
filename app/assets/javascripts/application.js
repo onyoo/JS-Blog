@@ -19,6 +19,7 @@ $(document).ready(function() {
   addPostComment();
   leaveAReply();
   newPostLink();
+  preventEditLink();
 })
 
 
@@ -54,6 +55,13 @@ $(document).ready(function() {
     $('#new_post_link').on('click', function(event) {
       event.preventDefault();
       // must have callback function to prevent CSRF
+      $.get(event.toElement.href, function(r) {
+      });
+    });
+  }
+  function preventEditLink() {
+    $('.edit_post').on('click', function(event) {
+      event.preventDefault();
       $.get(event.toElement.href, function(r) {
       });
     });
