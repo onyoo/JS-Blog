@@ -66,6 +66,10 @@ $(document).ready(function() {
       });
     });
   }
+  function exitForm() {
+    $('#new_post').remove()
+    clearForm();
+  }
   function clearForm() {
     $('#form_background').remove();
     $('div#new_post_form').hide();
