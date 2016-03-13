@@ -1,7 +1,6 @@
-$('#new_post').remove()
+$('#new_post').remove();
 
-$('#form_background').remove();
-$('div#new_post_form').hide();
+clearForm();
 
-$('h3.title').text('<%= @post.title %>')
-$('p.body').text('<%= @post.body %>')
+$('h3.title').text('<%= @post.title %>');
+$('p.body').text('<%= @post.body %>');

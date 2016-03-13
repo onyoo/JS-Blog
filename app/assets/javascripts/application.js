@@ -18,8 +18,8 @@
 $(document).ready(function() {
   addPostComment();
   leaveAReply();
-  newPostLink();
-  preventEditLink();
+
+
 })
 
 
@@ -65,4 +65,8 @@ $(document).ready(function() {
       $.get(event.toElement.href, function(r) {
       });
     });
+  }
+  function clearForm() {
+    $('#form_background').remove();
+    $('div#new_post_form').hide();
   }

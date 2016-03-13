@@ -1,4 +1,3 @@
-$('#new_post').remove()
-$('.posts_index').prepend('<%= j(render partial: "post_list_item", locals: { post: @post } ) %>')
-$('#form_background').remove();
-$('div#new_post_form').hide();
+$('.posts_index').prepend('<%= j(render partial: "post_list_item", locals: { post: @post } ) %>');
+$('#new_post').remove();
+clearForm();
