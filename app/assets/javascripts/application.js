@@ -26,22 +26,24 @@ $(document).ready(function() {
 
       url = this.action;
 
-      console.log(url);
-      data = {
-        authenticity_token: $('input[name="authenticity_token"]').val(),
-        comment: {
-          body: $('input#comment_body').val(),
-          post_id: $('#comment_post_id').val()
-        }
-      }
+      data = $(this).serialize();
 
-      $.ajax({
-        type: 'POST',
-        url: url,
-        data: data,
-        success: function(resp) {
-          $('.comment_list').append('<li>' + resp + '</li>')
-        }
-      });
+      // {
+      //   authenticity_token: $('input[name="authenticity_token"]').val(),
+      //   comment: {
+      //     body: $('input#comment_body').val(),
+      //     post_id: $('#comment_post_id').val(),
+      //     user_id: $('#comment_user_id').val()
+      //   }
+      // }
+
+      // $.ajax({
+      //   type: 'POST',
+      //   url: url,
+      //   data: data,
+      //   success: function(resp) {
+      //     // moved to create.js.erb
+      //   }
+      // });
   });
 }

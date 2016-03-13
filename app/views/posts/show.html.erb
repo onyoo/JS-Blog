@@ -7,5 +7,11 @@
 <%= render partial: 'comments/form', locals: { comment: @comment }%>
 <!-- <a href="/comments/new" class="new_comment">Comment</a> -->
 <h3>Comments:</h3>
+<ul class="comment_list">
 
-<%= render partial: 'comments/index_show', locals: { comments: @post.comments.where('body != ""') } %>
+  <% @post.comments.where('body != ""').each do |comment| %>
+    <li class="comment">
+      <%= render partial: 'comments/comment', locals: { comment: comment } %>
+    </li>
+  <% end %>
+</ul>

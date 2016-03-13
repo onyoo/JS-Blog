@@ -7,7 +7,11 @@ class CommentsController < ApplicationController
   def create
     @post = Post.find(params[:comment][:post_id])
     @comment = @post.comments.create(comment_params)
-    render 'show', layout: false
+    if @post.valid?
+      render 'create.js', layout: false
+    else
+      render nothing: true, status: 400
+    end
   end
 
   def edit
