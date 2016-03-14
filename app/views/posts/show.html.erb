@@ -1,5 +1,5 @@
-<a href="/posts/<%= @post.id %>/edit" class="edit_post">Edit</a>
-<a href="/posts">Index</a>
+<%= link_to "Edit", edit_post_path(@post), class: 'edit_post' %>
+<%= link_to "Index", posts_path %>
 
 <%= render partial: 'posts/show', locals: { post: @post } %>
 
