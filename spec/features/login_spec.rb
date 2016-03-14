@@ -26,4 +26,15 @@ RSpec.describe "Login", type: :feature do
     click_on 'Test...'
     expect(page).to have_content('Author: Who??')
   end
+
+  it 'should not let a user log-in with an incorrect password' do
+    visit root_path
+    click_on 'Log-in'
+
+    fill_in 'user[username]', with: 'who??'
+    fill_in 'user[password]', with: 'let me in!'
+    click_on 'Submit'
+
+    expect(page).to have_content('Incorrect username or password')
+  end
 end
