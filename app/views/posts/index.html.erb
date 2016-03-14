@@ -8,10 +8,7 @@
 
   <ul class="posts_index">
     <% @posts.each do |post| %>
-
-      <li class="post">
-        <%= render partial: 'index_show', locals: { post: post } %>
-      </li>
+        <%= render partial: 'post_list_item', locals: { post: post } %>
     <% end %>
   </ul>
   <%= page_entries_info @posts %>

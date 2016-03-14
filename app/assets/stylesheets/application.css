@@ -14,6 +14,10 @@
  *= require_self
  */
 
+body {
+  background: #414344; 
+}
+
  #form_background {
    width: 100%;
    height: 100%;
@@ -33,8 +37,29 @@
   padding: 5%;
   z-index: 2;
 }
-
+.shadow {
+  height: 2em;
+  position: fixed;
+  width: 100%;
+  top: 6em;
+  z-index: 1;
+  background: -moz-linear-gradient(top,  rgba(0,48,66,0.4) 0%, rgba(125,185,232,0) 100%);
+  background: -webkit-linear-gradient(top,  rgba(0,48,66,0.4) 0%,rgba(125,185,232,0) 100%);
+  background: linear-gradient(to bottom,  rgba(0,48,66,0.4) 0%,rgba(125,185,232,0) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#66003042', endColorstr='#007db9e8',GradientType=0 );
+}
 #new_post_form {
-
-
+  margin: 10%, 10%;
+}
+#close_button {
+  position: absolute;
+  top: 2em;
+  right: 3em;
+  height: 2em;
+  widows: 2em;
+}
+#post_header {
+  border: 5px solid black;
+  padding: 2em;
+  background-color: #F1ECE5;
 }

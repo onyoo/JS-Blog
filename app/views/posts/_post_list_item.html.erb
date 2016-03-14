@@ -1,6 +1,6 @@
 <li class="post">
-  <a href="/posts/<%= post.id %>"><%= post.title %></a>
+  <%= link_to post.title.titleize, post_path(post) %>
   <div class="body">
-    <p class="body_text"><%= post.body %></p>
+    <p class="body_text"><%= truncate post.body, length: 500 %></p>
   </div>
 </li>
