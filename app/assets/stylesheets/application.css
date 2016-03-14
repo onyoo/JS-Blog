@@ -67,3 +67,6 @@ body {
   border: 1px solid red;
   background-color: lightgreen;
 }
+#log_in_table td {
+  padding: .5em;
+}
