@@ -1,0 +1,9 @@
+$('#post_title').css('border-color', 'initial');
+$('#post_title').css('border-image-width', 'initial');
+$('#post_body').css('border-color', 'initial');
+
+if ("<%=@post.errors[:title]%>" != "[]") {
+  $('#post_title').css('border-color', 'red');
+}if ("<%=@post.errors[:body]%>" != "[]") {
+  $('#post_body').css('border-color', 'red');
+}
