@@ -1,4 +1,6 @@
-<%= link_to "Edit", edit_post_path(@post), class: 'edit_post' %>
+<% if policy(@post).update? %>
+  <%= link_to "Edit", edit_post_path(@post), class: 'edit_post' %>
+<% end %>
 <%= link_to "Index", posts_path %>
 
 <%= render partial: 'posts/show', locals: { post: @post } %>

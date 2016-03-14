@@ -47,6 +47,7 @@ group :development, :test do
   gem 'pry-byebug'
   gem 'database_cleaner'
   gem 'active_model_serializers'
+  gem "pundit"
 end
 
 group :development do
