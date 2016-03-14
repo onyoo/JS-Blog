@@ -26,6 +26,7 @@ gem 'kaminari'
 
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
+gem 'twitter-bootstrap-rails'
 
 # Use Unicorn as the app server
 # gem 'unicorn'
@@ -39,7 +40,7 @@ group :development, :test do
   gem 'rspec-core'
   gem 'rspec-rails'
   gem 'rspec-collection_matchers', '~> 1.1.2'
-  gem 'spring'
+
   gem 'capybara'
   # gem 'capybara-webkit'
   gem 'pry'

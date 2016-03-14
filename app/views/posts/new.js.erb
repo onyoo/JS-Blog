@@ -1,7 +1,8 @@
 $('body').prepend('<div id="form_background"></div>');
 $('div#new_post_form').show();
 $('#new_post_form').prepend('<%= j(render partial: "form", locals: { post: @post })%>');
+$('#new_post_form').append('<%= image_tag "close_button.png", id: "close_button" %>')
 
-$('#form_background').on('click', function(e){
+$('#form_background, #close_button').on('click', function(e){
   exitForm();
 });

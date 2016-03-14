@@ -7,13 +7,17 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <div class="container-fluid">
+    <% if !current_user %>
+      <%= link_to 'Log-in', login_path %>
+    <% end %>
+  </div> <!-- container -->
+  <div class="shadow">
+  </div>
+
   <div id="new_post_form"></div>
-  <% if !current_user %>
-    <%= link_to 'Log-in', login_path %>
-  <% end %>
-  <br>
-
-  <%= yield %>
-
+  <div class="container">
+    <%= yield %>
+  </div>
 </body>
 </html>
