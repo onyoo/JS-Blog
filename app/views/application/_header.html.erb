@@ -1,0 +1,10 @@
+<div class="container-fluid">
+
+  <% if !current_user %>
+    <%= link_to 'Log-in', login_path, id:'log_in' %>
+  <% end %>
+  <% if current_user %>
+    <%= link_to 'Log-out', logout_path, id:'log_out' %>
+  <% end %>
+
+</div> <!-- container-fluid -->

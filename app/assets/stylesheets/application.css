@@ -15,7 +15,7 @@
  */
 
 body {
-  background: #414344; 
+  background: #414344;
 }
 
  #form_background {
@@ -62,4 +62,8 @@ body {
   border: 5px solid black;
   padding: 2em;
   background-color: #F1ECE5;
+}
+#log_in, #log_out {
+  border: 1px solid red;
+  background-color: lightgreen;
 }

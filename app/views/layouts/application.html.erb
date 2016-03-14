@@ -7,11 +7,7 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <div class="container-fluid">
-    <% if !current_user %>
-      <%= link_to 'Log-in', login_path %>
-    <% end %>
-  </div> <!-- container -->
+  <%= render partial: "header" %>
   <div class="shadow">
   </div>
 
