@@ -1,4 +1,5 @@
-<%= comment.body %> <br>
+
+<%= comment.body %> <span id="comment_details"><%= comment.user.username.titleize %> at <%= comment.created_at.to_formatted_s(:short) %> </span><br>
 
 <ul class="replies" id="<%= comment.id %>">
   <% comment.replies.each do |r| %>
@@ -6,7 +7,7 @@
   <% end %>
 </ul>
 
-<a href='/comments/new' class="new_comment">Show Reply (not hidden yet)</a>
+<!-- <a href='/comments/new' class="new_comment">Show Reply (not hidden yet)</a> -->
 
 <ul class='replies' id='<%=comment.id%>'>
   <!-- renders reply form for newly built reply -->
