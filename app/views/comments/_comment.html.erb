@@ -2,9 +2,7 @@
 
 <ul class="replies" id="<%= comment.id %>">
   <% comment.replies.each do |r| %>
-    <li class="reply" id="<%=r.id%>">
-      <%= r.body %>
-    </li>
+    <%= render partial: 'replies/reply_handlebar', locals: { r: r } %>
   <% end %>
 </ul>
 
@@ -12,5 +10,5 @@
 
 <ul class='replies' id='<%=comment.id%>'>
   <!-- renders reply form for newly built reply -->
-  <%= render partial: 'comments/reply_form', locals: { reply: comment.replies.build }%>
+  <%= render partial: 'replies/reply_form', locals: { reply: comment.replies.build }%>
 </ul>

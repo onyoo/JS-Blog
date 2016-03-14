@@ -1,0 +1,4 @@
+<li class="reply" id="<%=r.id%>">
+  <p><%= r.body %></p>
+  <%= r.user.username.titleize %> at <i><%= r.created_at.to_formatted_s(:short) %></i>
+</li>
