@@ -5,21 +5,21 @@ RSpec.describe "Login", type: :feature do
   before do
     Post.destroy_all
     User.destroy_all
-    @user = User.create(username: 'who??', password: 'supersecure')
+    @user = User.create(name: 'who??', password: 'supersecure')
     @post = Post.create(title: 'test...', body: 'body...', user_id: @user.id)
   end
 
   it 'should require login to see post' do
     visit post_path(@post)
 
-    expect(page.body).to have_field("user[username]")
+    expect(page.body).to have_field("user[name]")
   end
 
   it 'should allow a user to log-in' do
     visit root_path
     click_on 'Log-in'
 
-    fill_in 'user[username]', with: 'who??'
+    fill_in 'user[name]', with: 'who??'
     fill_in 'user[password]', with: 'supersecure'
     click_on 'Submit'
 
@@ -31,10 +31,10 @@ RSpec.describe "Login", type: :feature do
     visit root_path
     click_on 'Log-in'
 
-    fill_in 'user[username]', with: 'who??'
+    fill_in 'user[name]', with: 'who??'
     fill_in 'user[password]', with: 'let me in!'
     click_on 'Submit'
 
-    expect(page).to have_content('Incorrect username or password')
+    expect(page).to have_content('Incorrect name or password')
   end
 end

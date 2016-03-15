@@ -1,4 +1,4 @@
 <li class="reply" id="<%=r.id%>">
   <%= r.body %>
-  <span id="comment_details"><%= r.user.username.titleize %> at <%= r.created_at.to_formatted_s(:short) %> </span>
+  <span id="comment_details"><%= r.user.name.titleize %> at <%= r.created_at.to_formatted_s(:short) %> </span>
 </li>

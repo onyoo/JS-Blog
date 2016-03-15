@@ -1,5 +1,5 @@
 
-<%= comment.body %> <span id="comment_details"><%= comment.user.username.titleize %> at <%= comment.created_at.to_formatted_s(:short) %> </span><br>
+<%= comment.body %> <span id="comment_details"><%= comment.user.name.titleize %> at <%= comment.created_at.to_formatted_s(:short) %> </span><br>
 
 <ul class="replies" id="<%= comment.id %>">
   <% comment.replies.each do |r| %>

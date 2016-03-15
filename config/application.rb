@@ -5,6 +5,13 @@ require 'rails/all'
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
+Dotenv::Railtie.load
+
+FACEBOOK_APP_ID = ENV['FACEBOOK_APP_ID']
+FACEBOOK_SECRET = ENV['FACEBOOK_SECRET']
+
+GOOGLE_CLIENT_ID = ENV['GOOGLE_CLIENT_ID']
+GOOGLE_CLIENT_SECRET = ENV['GOOGLE_CLIENT_SECRET']
 
 module JSBlog
   class Application < Rails::Application

@@ -5,10 +5,19 @@ Rails.application.routes.draw do
   resources :users
   resources :comments
   resources :replies, only: [:create]
-  
+
   get 'login' => 'sessions#new'
   post 'login' => 'sessions#create'
   get 'logout' => 'sessions#destroy'
+
+  get '/auth/facebook', as: 'facebook_login'
+  get 'auth/:provider/callback', to: 'sessions#create'
+  get 'auth/failure', to: redirect('home')
+
+  get '/auth/google_oauth2', as: 'google_login'
+
+  
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

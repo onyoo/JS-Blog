@@ -1,8 +1,8 @@
 <%= form_for @user, url: login_path(@user) do |f| %>
   <table id="log_in_table">
     <tr>
-      <td><%= f.label :username %></td>
-      <td><%= f.text_field :username, value: 'hi' %></td>
+      <td><%= f.label :name %></td>
+      <td><%= f.text_field :name, value: 'hi' %></td>
     </tr>
     <tr>
       <td><%= f.label :password %></td>

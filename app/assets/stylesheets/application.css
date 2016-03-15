@@ -63,7 +63,7 @@ body {
   padding: 2em;
   background-color: #F1ECE5;
 }
-#log_in, #log_out {
+#log_in, #log_out, #fb_log_in, #google_log_in {
   border: 1px solid red;
   background-color: lightgreen;
 }
@@ -81,4 +81,8 @@ body {
 #comment_details {
   float: right;
   margin-right: 10%;
+}
+#login_greeting {
+  background-color: lightblue;
+  
 }

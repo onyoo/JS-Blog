@@ -3,7 +3,6 @@ class PostsController < ApplicationController
 
   def index
     @posts = Post.order(created_at: :desc).page(params[:page])
-    authorize Post
   end
 
   def new
@@ -27,6 +26,7 @@ class PostsController < ApplicationController
 
   def update
     @post = Post.find(params[:id])
+    authorize @post # extra layer of authorization
     if @post.update(post_params)
       render 'edit.js', status: 201
     else
