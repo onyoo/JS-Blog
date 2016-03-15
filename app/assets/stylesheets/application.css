@@ -63,9 +63,14 @@ body {
   padding: 2em;
   background-color: #F1ECE5;
 }
-#log_in, #log_out, #fb_log_in, #google_log_in {
-  border: 1px solid red;
-  background-color: lightgreen;
+.social_login_link {
+  margin-right: .5em;
+  position: relative;
+  display: inline-block;
+}
+#sign_in_div {
+  position: fixed;
+  right: 1em;
 }
 #log_in_table td {
   padding: .5em;
@@ -84,5 +89,33 @@ body {
 }
 #login_greeting {
   background-color: lightblue;
-  
+
+}
+#fb_sprite {
+  height: 39px;
+  width: 39px;
+  background: url('social_icon_280.png') 0px 0;
+  top: 3%;
+  /*right: 20%;*/
+}
+#google_sprite {
+  height: 39px;
+  width: 39px;
+  background: url('social_icon_280.png') -240px 0px;
+  top: 3%;
+  /*right: 15%;*/
+}
+#twitter_sprite {
+  height: 39px;
+  width: 39px;
+  background: url('social_icon_280.png') -39px 0;
+  top: 3%;
+  /*right: 10%;*/
+}
+#linkedin_sprite {
+  height: 39px;
+  width: 39px;
+  background: url('social_icon_280.png') -161px 0;
+  top: 3%;
+  /*right: 5%;*/
 }

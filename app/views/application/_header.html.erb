@@ -1,16 +1,18 @@
 <div class="container-fluid">
 
-  <% if !current_user %>
-    <!-- <%= link_to 'Log-in', login_path, id:'log_in' %> -->
-    <%= link_to 'Lon-in FB', facebook_login_path, id:'fb_log_in'%>
-    <%= link_to 'Log-in Google+', google_login_path, id: 'google_log_in'%>
-    <%= link_to 'Twitter', twitter_login_path, id: 'google_log_in' %>
-    <%= link_to 'Log-in LinkedIn', linkedin_path, id: 'google_log_in'%>
-  <% end %>
-  <% if current_user %>
-    <%= link_to 'Log-out', logout_path, id:'log_out' %>
-    <div id='login_greeting'>Hello <%= current_user.name %>! You are logged in via <%= current_user.provider %></div>
-  <% end %>
+  <div id="sign_in_div">
+    <% if !current_user %>
+      <h6>Sign in with one of the following:</h6>
+      <%= link_to '', facebook_login_path, class:'social_login_link', id: "fb_sprite" %>
+      <%= link_to '', google_login_path, class: 'social_login_link', id: "google_sprite" %>
+      <%= link_to '', twitter_login_path, class: 'social_login_link', id: "twitter_sprite" %>
+      <%= link_to '', linkedin_path, class: 'social_login_link', id: "linkedin_sprite"%>
+    <% end %>
+    <% if current_user %>
+      <%= link_to 'Log-out', logout_path, id:'log_out' %>
+      <div id='login_greeting'>Hello <%= current_user.name %>! You are logged in via <%= current_user.provider %></div>
+    <% end %>
+  </div> <!-- sign_in_div -->
 
   <% flash.each do |name, message| %>
     <div id="flashnotice"><%=message.capitalize%></div>
