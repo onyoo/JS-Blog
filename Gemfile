@@ -27,9 +27,11 @@ gem 'kaminari'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 gem 'twitter-bootstrap-rails'
+gem 'omniauth-oauth2', '1.3.1'
 gem 'omniauth-facebook'
 gem 'omniauth-google-oauth2'
 gem 'omniauth-twitter'
+gem 'omniauth-linkedin-oauth2'
 gem 'dotenv-rails', :groups => [:development, :test]
 
 # Use Unicorn as the app server

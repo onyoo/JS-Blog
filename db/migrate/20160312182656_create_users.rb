@@ -8,11 +8,10 @@ class CreateUsers < ActiveRecord::Migration
       t.string :provider#, null: false
       t.string :uid#, null: false
 
-# twitter
       # add_index :users, :provider
       # add_index :users, :uid
       # add_index :users, [:provider, :uid], unique: true
-
+# twitter
       t.string :url
       t.string :location
       t.string :image_url
