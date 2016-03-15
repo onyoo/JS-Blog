@@ -66,6 +66,9 @@ body {
 .social_login_link {
   margin-right: .5em;
   position: relative;
+  top: 3%;
+  height: 39px;
+  width: 39px;
   display: inline-block;
 }
 #sign_in_div {
@@ -87,35 +90,81 @@ body {
   float: right;
   margin-right: 10%;
 }
-#login_greeting {
-  background-color: lightblue;
 
-}
 #fb_sprite {
-  height: 39px;
-  width: 39px;
-  background: url('social_icon_280.png') 0px 0;
-  top: 3%;
-  /*right: 20%;*/
+  background: url('social_icon_280.png') 0px -39px;
 }
 #google_sprite {
-  height: 39px;
-  width: 39px;
-  background: url('social_icon_280.png') -240px 0px;
-  top: 3%;
-  /*right: 15%;*/
+  background: url('social_icon_280.png') -240px -39px;
 }
 #twitter_sprite {
-  height: 39px;
-  width: 39px;
-  background: url('social_icon_280.png') -39px 0;
-  top: 3%;
-  /*right: 10%;*/
+  background: url('social_icon_280.png') -39px -39px;
 }
 #linkedin_sprite {
-  height: 39px;
-  width: 39px;
-  background: url('social_icon_280.png') -161px 0;
-  top: 3%;
-  /*right: 5%;*/
+  background: url('social_icon_280.png') -161px -39px;
 }
+#fb_sprite:hover {
+  background: url('social_icon_280.png') 0px 0;
+}
+#google_sprite:hover {
+  background: url('social_icon_280.png') -240px 0px;
+}
+#twitter_sprite:hover {
+  background: url('social_icon_280.png') -39px 0;
+}
+#linkedin_sprite:hover {
+  background: url('social_icon_280.png') -161px 0;
+}
+
+
+.ribbon-wrapper-green {
+  width: 300px;
+  height: 83px;
+  overflow: hidden;
+  position: absolute;
+  right: -30px;
+  top: 0px;
+}
+
+.ribbon-green {
+  font: bold 15px Sans-Serif;
+  color: #333;
+  text-align: center;
+  text-shadow: rgba(255,255,255,0.5) 0px 1px 0px;
+  -webkit-transform: rotate(25deg);
+  -moz-transform:    rotate(25deg);
+  -ms-transform:     rotate(25deg);
+  -o-transform:      rotate(25deg);
+  position: relative;
+  padding: 7px 0;
+  left: 50px;
+  top: 5px;
+  width: 320px;
+  background-color: #BFDC7A;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#BFDC7A), to(#8EBF45));
+  background-image: -webkit-linear-gradient(top, #BFDC7A, #8EBF45);
+  background-image:    -moz-linear-gradient(top, #BFDC7A, #8EBF45);
+  background-image:     -ms-linear-gradient(top, #BFDC7A, #8EBF45);
+  background-image:      -o-linear-gradient(top, #BFDC7A, #8EBF45);
+  color: #6a6340;
+  -webkit-box-shadow: 0px 0px 3px rgba(0,0,0,0.3);
+  -moz-box-shadow:    0px 0px 3px rgba(0,0,0,0.3);
+  box-shadow:         0px 0px 3px rgba(0,0,0,0.3);
+  font-size: 85%;
+}
+
+.ribbon-green:before, .ribbon-green:after {
+  content: "";
+  border-top:   3px solid #6e8900;
+  border-left:  3px solid transparent;
+  border-right: 3px solid transparent;
+  position:absolute;
+  bottom: -3px;
+}
+
+.ribbon-green:before {
+  left: 0;
+}
+.ribbon-green:after {
+  right: 0;
+}​

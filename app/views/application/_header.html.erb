@@ -9,8 +9,12 @@
       <%= link_to '', linkedin_path, class: 'social_login_link', id: "linkedin_sprite"%>
     <% end %>
     <% if current_user %>
-      <%= link_to 'Log-out', logout_path, id:'log_out' %>
-      <div id='login_greeting'>Hello <%= current_user.name %>! You are logged in via <%= current_user.provider %></div>
+        <div class="ribbon-wrapper-green">
+          <div class="ribbon-green">
+            <%= link_to 'Log-out', logout_path %>
+            <div id='login_greeting'>Hello <%= current_user.name %>! <br> Logged in via <%= current_user.provider %></div>
+          </div>
+        </div> <!-- ribbon-wrapper-green -->
     <% end %>
   </div> <!-- sign_in_div -->
 
