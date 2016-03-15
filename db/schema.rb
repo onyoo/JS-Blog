@@ -43,8 +43,10 @@ ActiveRecord::Schema.define(version: 20160312182656) do
     t.string   "url"
     t.string   "location"
     t.string   "image_url"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.string   "oauth_token"
+    t.datetime "oauth_expires_at"
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
   end
 
 end

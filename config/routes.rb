@@ -9,14 +9,15 @@ Rails.application.routes.draw do
   get 'login' => 'sessions#new'
   post 'login' => 'sessions#create'
   get 'logout' => 'sessions#destroy'
+#general purpose callback [twitter, google, fb]
+  get 'auth/:provider/callback', to: 'sessions#create'
 
   get '/auth/facebook', as: 'facebook_login'
-  get 'auth/:provider/callback', to: 'sessions#create'
   get 'auth/failure', to: redirect('home')
 
-  get '/auth/google_oauth2', as: 'google_login'
+  get '/auth/google', as: 'google_login'
 
-  
+  get '/auth/twitter', as: 'twitter_login'
 
 
   # The priority is based upon order of creation: first created -> highest priority.

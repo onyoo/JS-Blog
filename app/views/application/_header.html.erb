@@ -3,8 +3,8 @@
   <% if !current_user %>
     <%= link_to 'Log-in', login_path, id:'log_in' %>
     <%= link_to 'Lon-in FB', facebook_login_path, id:'fb_log_in'%>
-    <%= link_to 'Log-in Google', google_login_path, id: 'google_log_in'%>
-    <%= link_to 'Twitter', '/auth/twitter', id: 'google_log_in' %>
+    <%= link_to 'Log-in Google+', google_login_path, id: 'google_log_in'%>
+    <%= link_to 'Twitter', twitter_login_path, id: 'google_log_in' %>
   <% end %>
   <% if current_user %>
     <%= link_to 'Log-out', logout_path, id:'log_out' %>

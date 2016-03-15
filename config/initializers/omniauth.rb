@@ -3,6 +3,6 @@ Rails.application.config.middleware.use OmniAuth::Builder do
     config.path_prefix = '/auth'
   end
   provider :facebook, ENV['FACEBOOK_APP_ID'], ENV['FACEBOOK_SECRET'], :scope => 'email', :display => 'popup'
-  provider :google_oauth2, ENV["GOOGLE_CLIENT_ID"], ENV["GOOGLE_CLIENT_SECRET"]
+  provider :google_oauth2, ENV["GOOGLE_CLIENT_ID"], ENV["GOOGLE_CLIENT_SECRET"], scope: 'profile', access_type: 'online', name: 'google'
   provider :twitter, ENV['TWITTER_KEY'], ENV['TWITTER_SECRET']
 end
