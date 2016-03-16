@@ -1,6 +1,10 @@
 
+This is a basic blog app.
 
-Blog app with comments
+Users can log-in via their LinkedIn, Google, Facebook, or Twitter accounts.
 
-Can comment on show page
-  -comments fire with ajax
+Once logged-in users can create, edit or delete their posts. Commenting, and
+replying to comments is also possible.
+
+Creating posts or comments/replies is done via AJAX request. The app makes use
+of Rails USJ to do this.

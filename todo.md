@@ -1,4 +1,2 @@
-~fb oauth
-goog oauth
-gh oauth
-twitter
+change tab picture
+email notification feature

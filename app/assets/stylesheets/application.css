@@ -105,15 +105,19 @@ body {
 }
 #fb_sprite:hover {
   background: url('social_icon_280.png') 0px 0;
+  cursor: pointer;
 }
 #google_sprite:hover {
   background: url('social_icon_280.png') -240px 0px;
+  cursor: pointer;
 }
 #twitter_sprite:hover {
   background: url('social_icon_280.png') -39px 0;
+  cursor: pointer;
 }
 #linkedin_sprite:hover {
   background: url('social_icon_280.png') -161px 0;
+  cursor: pointer;
 }
 
 

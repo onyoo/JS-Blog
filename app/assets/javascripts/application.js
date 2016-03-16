@@ -21,7 +21,7 @@ $(document).ready(function() {
 
 
 })
-
+'use strict';
 
   function addPostComment() {
     $('#new_comment').on('submit', function(event) {
