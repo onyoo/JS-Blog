@@ -8,11 +8,24 @@
   <% end %>
   <h3>Posts:</h3>
 
-  <ul class="posts_index">
-    <% @posts.each do |post| %>
-        <%= render partial: 'post_list_item', locals: { post: post } %>
-    <% end %>
-  </ul>
+  <div ng-app='app' class='app'>
+    <div ng-controller='PostController as ctrl'>
+
+    <ul class="posts_index">
+      <li ng-repeat='post in ctrl.posts'>
+        <post-item
+            title='post.title'
+            body='post.body' />
+      </li>
+
+
+      <% @posts.each do |post| %>
+          <%= render partial: 'post_list_item', locals: { post: post } %>
+      <% end %>
+    </ul>
+    </div>
+  </div>
+
   <%= page_entries_info @posts %>
 
 <%= render 'index_js' %>
