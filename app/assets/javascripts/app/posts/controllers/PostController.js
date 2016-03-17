@@ -1,14 +1,6 @@
-function PostController() {
+function PostController(PostServices) {
 
-
-  
-  this.posts = [{
-    title: "this is a post from the controller",
-    body: "This is a body from the controller"
-  }, {
-    title: "This is another from the controller",
-    body: "Number 2 from the controller"
-  }];
+  this.posts = PostServices.posts
 }
 
 angular
