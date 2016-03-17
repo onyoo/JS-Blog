@@ -1,2 +1,2 @@
 $('form#reply_form #comment_body').val('');
-$('.comment #<%=@comment.id%>').append('<%= j render partial: "reply_handlebar", locals: { r: @reply } %>')
+$('.comment #<%=@comment.id%>').append('<%= j render partial: "reply_li", locals: { r: @reply } %>')
